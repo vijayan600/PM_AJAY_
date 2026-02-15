@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #f8fafc;
+    color: #1e293b;
+  }
+  h1, h2, h3, h4, h5, h6 { font-family: 'Outfit', 'Inter', sans-serif; }
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: #f1f5f9; }
+  ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-xl border border-white/20 rounded-2xl shadow-glass;
+  }
+  .glass-card-dark {
+    @apply bg-slate-900/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl shadow-glass;
+  }
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-saffron-500 via-navy-500 to-forest-500;
+  }
+  .gradient-text-hero {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-amber-300 via-orange-400 to-yellow-300;
+  }
+  .btn-primary {
+    @apply px-6 py-2.5 bg-gradient-to-r from-navy-500 to-navy-600 text-white font-semibold rounded-xl 
+    hover:from-navy-600 hover:to-navy-700 transition-all duration-300 shadow-lg hover:shadow-xl 
+    hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-saffron {
+    @apply px-6 py-2.5 bg-gradient-to-r from-saffron-500 to-saffron-600 text-white font-semibold rounded-xl
+    hover:from-saffron-600 hover:to-saffron-700 transition-all duration-300 shadow-lg hover:shadow-xl
+    hover:-translate-y-0.5;
+  }
+  .btn-outline {
+    @apply px-6 py-2.5 border-2 border-navy-500 text-navy-500 font-semibold rounded-xl
+    hover:bg-navy-500 hover:text-white transition-all duration-300;
+  }
+  .btn-success {
+    @apply px-6 py-2.5 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-semibold rounded-xl
+    hover:from-emerald-600 hover:to-emerald-700 transition-all duration-300 shadow-lg;
+  }
+  .btn-danger {
+    @apply px-6 py-2.5 bg-gradient-to-r from-red-500 to-red-600 text-white font-semibold rounded-xl
+    hover:from-red-600 hover:to-red-700 transition-all duration-300 shadow-lg;
+  }
+  .input-field {
+    @apply w-full px-4 py-3 bg-white border border-slate-200 rounded-xl text-slate-800 
+    placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-navy-500/30 focus:border-navy-500
+    transition-all duration-200;
+  }
+  .stat-card {
+    @apply relative overflow-hidden bg-white rounded-2xl p-6 shadow-card hover:shadow-card-hover 
+    transition-all duration-300 hover:-translate-y-1 border border-slate-100;
+  }
+  .sidebar-link {
+    @apply flex items-center gap-3 px-4 py-3 rounded-xl text-slate-300 hover:text-white 
+    hover:bg-white/10 transition-all duration-200 font-medium text-sm;
+  }
+  .sidebar-link-active {
+    @apply flex items-center gap-3 px-4 py-3 rounded-xl text-white bg-white/15 
+    font-semibold text-sm shadow-lg;
+  }
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold;
+  }
+  .badge-success { @apply badge bg-emerald-100 text-emerald-700; }
+  .badge-warning { @apply badge bg-amber-100 text-amber-700; }
+  .badge-danger { @apply badge bg-red-100 text-red-700; }
+  .badge-info { @apply badge bg-blue-100 text-blue-700; }
+  .badge-purple { @apply badge bg-purple-100 text-purple-700; }
+  .page-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8;
+  }
+  .section-title {
+    @apply text-2xl font-bold text-slate-800 font-display;
+  }
+  .table-container {
+    @apply bg-white rounded-2xl shadow-card overflow-hidden border border-slate-100;
+  }
+  .table-header {
+    @apply px-6 py-4 text-left text-xs font-bold text-slate-500 uppercase tracking-wider bg-slate-50;
+  }
+  .table-cell {
+    @apply px-6 py-4 text-sm text-slate-700 whitespace-nowrap;
+  }
+}
+
+@layer utilities {
+  .animate-delay-100 { animation-delay: 100ms; }
+  .animate-delay-200 { animation-delay: 200ms; }
+  .animate-delay-300 { animation-delay: 300ms; }
+  .animate-delay-400 { animation-delay: 400ms; }
+  .animate-delay-500 { animation-delay: 500ms; }
+}
