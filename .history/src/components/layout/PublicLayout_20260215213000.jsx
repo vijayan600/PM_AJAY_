@@ -62,7 +62,7 @@ export default function PublicLayout() {
                         <div className="flex items-center gap-3">
                             {isAuthenticated ? (
                                 <Link to={getDashboardLink()} className="btn-primary text-sm !px-4 !py-2">
-                                    Dashboard
+                                    Dash
                                 </Link>
                             ) : (
                                 <Link to="/login" className="btn-primary text-sm !px-4 !py-2">
